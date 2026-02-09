@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>云南项目 - 执行驾驶舱 V3</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <header class="topbar">
+        <div class="identity">
+          <div class="logo">PM3</div>
+          <div>
+            <p class="title">云南项目执行驾驶舱 V3</p>
+            <p class="subtitle">项目管理软件风格 / 状态流转+多角色协同强化版</p>
+          </div>
+        </div>
+        <div class="meta" id="datasetMeta">加载数据中...</div>
+      </header>
+
+      <main class="main">
+        <section class="overview" id="overviewCards"></section>
+
+        <section class="flow-funnel" id="flowFunnel"></section>
+
+        <section class="filter-panel">
+          <div class="filter-grid">
+            <label>
+              <span>关键词</span>
+              <input id="keywordInput" type="search" placeholder="项目名 / 项目编号 / record_id" />
+            </label>
+            <label>
+              <span>执行状态</span>
+              <select id="executionFilter"></select>
+            </label>
+            <label>
+              <span>数据状态</span>
+              <select id="dataFilter"></select>
+            </label>
+            <label>
+              <span>证据状态</span>
+              <select id="evidenceFilter"></select>
+            </label>
+            <label>
+              <span>优先级</span>
+              <select id="priorityFilter">
+                <option value="all">全部</option>
+                <option value="P0">P0</option>
+                <option value="P1">P1</option>
+                <option value="P2">P2</option>
+              </select>
+            </label>
+            <label>
+              <span>责任角色</span>
+              <select id="ownerFilter">
+                <option value="all">全部</option>
+                <option value="项目经理">项目经理</option>
+                <option value="数据专员">数据专员</option>
+                <option value="材料专员">材料专员</option>
+                <option value="PI负责人">PI负责人</option>
+              </select>
+            </label>
+          </div>
+          <div class="quick-presets" id="quickPresets"></div>
+          <div class="filter-toolbar">
+            <div class="left">
+              <label>
+                <span>排序字段</span>
+                <select id="sortBy">
+                  <option value="priority">优先级</option>
+                  <option value="end_date">截止日期</option>
+                  <option value="risk">风险数</option>
+                  <option value="completion">达成率</option>
+                </select>
+              </label>
+              <button class="btn" id="sortDirBtn">降序</button>
+              <button class="btn ghost" id="resetBtn">重置筛选</button>
+            </div>
+            <div class="right">
+              <span class="result" id="resultMeta">0 / 0 记录</span>
+            </div>
+          </div>
+          <div class="active-path" id="activePath"></div>
+        </section>
+
+        <section class="content-grid">
+          <div class="main-panel">
+            <div class="tabbar">
+              <button class="tab active" data-tab="board">流程看板</button>
+              <button class="tab" data-tab="table">执行表格</button>
+              <button class="tab" data-tab="collab">协作矩阵</button>
+            </div>
+
+            <div class="tab-content" id="boardTab">
+              <div class="board-grid" id="boardGrid"></div>
+            </div>
+
+            <div class="tab-content hidden" id="tableTab">
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>record_id</th>
+                      <th>项目名称</th>
+                      <th>优先级</th>
+                      <th>执行状态</th>
+                      <th>责任角色</th>
+                      <th>筛选链路</th>
+                      <th>下一步动作</th>
+                      <th>达成率</th>
+                      <th>end_date</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tableBody"></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="tab-content hidden" id="collabTab">
+              <div class="matrix-wrap" id="collabMatrix"></div>
+            </div>
+          </div>
+
+          <aside class="side-panel">
+            <section class="side-card">
+              <h3>角色负载</h3>
+              <div id="roleWorkload"></div>
+            </section>
+            <section class="side-card">
+              <h3>关键提醒</h3>
+              <ul id="alerts"></ul>
+            </section>
+          </aside>
+        </section>
+      </main>
+    </div>
+
+    <div class="drawer-overlay" id="drawerOverlay" aria-hidden="true">
+      <aside class="drawer">
+        <header>
+          <h3 id="drawerTitle">详情</h3>
+          <button class="btn ghost" id="drawerClose">关闭</button>
+        </header>
+        <div class="drawer-body" id="drawerBody"></div>
+      </aside>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

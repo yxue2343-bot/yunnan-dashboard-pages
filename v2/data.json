@@ -1,0 +1,1062 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-02-09T09:05:00+08:00",
+  "project": "1云南项目",
+  "dataset": "交差主表标准化数据",
+  "source": {
+    "base_summary": "/Users/xyt/project/1云南项目/自动整理输出/10_final_summary.md",
+    "main_table_extract": "/Users/xyt/project/1云南项目/自动整理输出/临时_主表结构化摘录.md",
+    "main_table_raw": "/Users/xyt/project/1云南项目/自动整理输出/临时_交差任务_主表.md",
+    "v1_change_log": "/Users/xyt/project/1云南项目/自动整理输出/07_v1_change_log.md",
+    "v2_change_log": "/Users/xyt/project/1云南项目/自动整理输出/09_v2_change_log.md",
+    "reviewed_outputs": [
+      "01_inventory.md",
+      "02_chat_requirements.md",
+      "03_pdf_facts.md",
+      "04_gap_matrix.md",
+      "05_candidate_papers_raw.md",
+      "06_candidate_papers.csv",
+      "06_candidate_papers_readme.md",
+      "07_v1_change_log.md",
+      "08_qa_review.md",
+      "09_v2_change_log.md",
+      "10_final_summary.md"
+    ]
+  },
+  "field_coverage": {
+    "table1_columns": [
+      "项目名称",
+      "起止年限",
+      "中核.已完成",
+      "中核.还差",
+      "中核.总",
+      "发明专利.已完成",
+      "发明专利.还差",
+      "发明专利.总",
+      "EI.已完成",
+      "EI.还差",
+      "EI.总",
+      "SCI.已完成",
+      "SCI.还差",
+      "SCI.总",
+      "总指标",
+      "项目编号",
+      "PPT",
+      "支撑材料整理"
+    ],
+    "table2_columns": [
+      "项目名称",
+      "起止年限",
+      "中核.已完成",
+      "中核.还差",
+      "中核.总",
+      "发明专利.已完成",
+      "发明专利.还差",
+      "发明专利.总",
+      "软著.已完成",
+      "软著.还差",
+      "软著.总",
+      "EI.已完成",
+      "EI.还差",
+      "EI.总",
+      "SCI.已完成",
+      "SCI.还差",
+      "SCI.总",
+      "报告",
+      "PPT",
+      "支撑材料整理"
+    ],
+    "coverage_result": {
+      "table1": "100%",
+      "table2": "100%",
+      "supplement_blocks": "included"
+    }
+  },
+  "status_flow": {
+    "data_status": [
+      "draft",
+      "pending_validation",
+      "validated",
+      "locked",
+      "archived"
+    ],
+    "evidence_status": [
+      "missing",
+      "partial",
+      "matched",
+      "approved"
+    ],
+    "execution_status": [
+      "todo",
+      "in_progress",
+      "blocked",
+      "done"
+    ]
+  },
+  "records": [
+    {
+      "record_id": "T1-R01",
+      "source_table": "table1_recent",
+      "project_name": "杭州供电局科技项目“服务分布式光伏主动消纳的混合式配电变压器关键技术与多机协同控制研究”",
+      "period_raw": "2023.01.01~2024.12.31",
+      "start_date": "2023-01-01",
+      "end_date": "2024-12-31",
+      "date_precision": "day",
+      "project_code": "5211HZ230005",
+      "project_code_type": "项目编号",
+      "budget_raw": null,
+      "target_summary": "发表或录用中文核心期刊或三大检索论文3篇,申请发明专利4项",
+      "report_raw": null,
+      "ppt_raw": null,
+      "supporting_material_raw": "【待确认：合同号SGZJHZ00HLJS2311584与本行项目编号映射】",
+      "metrics": {
+        "zhonghe": {
+          "completed_raw": "0",
+          "gap_raw": "0",
+          "total_raw": "0",
+          "detail_raw": "0",
+          "completed": 0,
+          "gap": 0,
+          "total": 0
+        },
+        "invention_patent": {
+          "completed_raw": "4",
+          "gap_raw": "0",
+          "total_raw": "4",
+          "detail_raw": "4",
+          "completed": 4,
+          "gap": 0,
+          "total": 4
+        },
+        "software_copyright": null,
+        "ei": {
+          "completed_raw": "1世超",
+          "gap_raw": "0",
+          "total_raw": "2",
+          "detail_raw": "1世超+control PV+HDT会议1子涵+选址定容",
+          "completed": 2,
+          "gap": 0,
+          "total": 2
+        },
+        "sci": {
+          "completed_raw": "1张立石",
+          "gap_raw": "0",
+          "total_raw": "1",
+          "detail_raw": "1张立石Collaborative",
+          "completed": 1,
+          "gap": 0,
+          "total": 1
+        }
+      },
+      "anomaly_flags": [
+        "missing_ppt"
+      ],
+      "workflow_status": {
+        "data_status": "validated",
+        "evidence_status": "partial",
+        "execution_status": "in_progress"
+      }
+    },
+    {
+      "record_id": "T1-R02",
+      "source_table": "table1_recent",
+      "project_name": "陕西省重点研发计划“面向分布式光伏就地消纳的混合式配电变压器关键技术研究与应用校企合作研发平台”",
+      "period_raw": "2023.01.01~2024.12.31",
+      "start_date": "2023-01-01",
+      "end_date": "2024-12-31",
+      "date_precision": "day",
+      "project_code": "2022GXLH-01-10",
+      "project_code_type": "项目编号",
+      "budget_raw": null,
+      "target_summary": "发表学术论文6篇以上，其中SCI检索收录论文不少于1篇，EI检索收录论文不少于4篇；申请发明专利4项；",
+      "report_raw": null,
+      "ppt_raw": null,
+      "supporting_material_raw": "1合同盖章版_高校联合平台.pdf",
+      "metrics": {
+        "zhonghe": {
+          "completed_raw": "0",
+          "gap_raw": "0",
+          "total_raw": "0",
+          "detail_raw": "0",
+          "completed": 0,
+          "gap": 0,
+          "total": 0
+        },
+        "invention_patent": {
+          "completed_raw": "1李佳1靳豪1柳轶彬1孔子涵",
+          "gap_raw": "0",
+          "total_raw": "4",
+          "detail_raw": "1李佳1靳豪1柳轶彬+无旁路1孔子涵+HDT系统优化",
+          "completed": 4,
+          "gap": 0,
+          "total": 4
+        },
+        "software_copyright": null,
+        "ei": {
+          "completed_raw": "2柳轶彬1张立石2薛彦廷",
+          "gap_raw": "1",
+          "total_raw": "5",
+          "detail_raw": "2柳轶彬+功角优化+Modeling1张立石+Collaborative2薛彦廷+PV-SC+切换",
+          "completed": 4,
+          "gap": 1,
+          "total": 5
+        },
+        "sci": {
+          "completed_raw": "1张立石",
+          "gap_raw": "0",
+          "total_raw": "1",
+          "detail_raw": "1张立石multi-lay(第2)",
+          "completed": 1,
+          "gap": 0,
+          "total": 1
+        }
+      },
+      "anomaly_flags": [
+        "missing_ppt"
+      ],
+      "workflow_status": {
+        "data_status": "validated",
+        "evidence_status": "matched",
+        "execution_status": "in_progress"
+      }
+    },
+    {
+      "record_id": "T1-R03",
+      "source_table": "table1_recent",
+      "project_name": "重点实验室项目(含光储接入的混合式配电变压器协同控制研究)",
+      "period_raw": "2022.7.18~2024.12.31",
+      "start_date": "2022-07-18",
+      "end_date": "2024-12-31",
+      "date_precision": "day",
+      "project_code": "EIPE22107",
+      "project_code_type": "项目编号",
+      "budget_raw": null,
+      "target_summary": "发表SCI论文5篇，申请发明专利2项",
+      "report_raw": null,
+      "ppt_raw": null,
+      "supporting_material_raw": "【待确认：聊天记录条目（EIPE22107）待PDF批文复核】",
+      "metrics": {
+        "zhonghe": {
+          "completed_raw": "0",
+          "gap_raw": "0",
+          "total_raw": "0",
+          "detail_raw": "0",
+          "completed": 0,
+          "gap": 0,
+          "total": 0
+        },
+        "invention_patent": {
+          "completed_raw": "1栗世超1孔子涵",
+          "gap_raw": "0",
+          "total_raw": "2",
+          "detail_raw": "1栗世超+风电HDT1孔子涵+HDT选址",
+          "completed": 2,
+          "gap": 0,
+          "total": 2
+        },
+        "software_copyright": null,
+        "ei": {
+          "completed_raw": "0",
+          "gap_raw": "0",
+          "total_raw": "0",
+          "detail_raw": "0",
+          "completed": 0,
+          "gap": 0,
+          "total": 0
+        },
+        "sci": {
+          "completed_raw": "2张立石2柳轶彬1梁阳",
+          "gap_raw": "0",
+          "total_raw": "5",
+          "detail_raw": "2张立石multi-lay+Collaborative2柳轶彬mag+Quasi1梁阳",
+          "completed": 5,
+          "gap": 0,
+          "total": 5
+        }
+      },
+      "anomaly_flags": [
+        "missing_ppt"
+      ],
+      "workflow_status": {
+        "data_status": "validated",
+        "evidence_status": "partial",
+        "execution_status": "in_progress"
+      }
+    },
+    {
+      "record_id": "T1-R04",
+      "source_table": "table1_recent",
+      "project_name": "国自然青年基金“基于观测磁链主动控制的混合式配电变压器偏磁抑制”",
+      "period_raw": "2023.01.01~2025.12.31",
+      "start_date": "2023-01-01",
+      "end_date": "2025-12-31",
+      "date_precision": "day",
+      "project_code": "52207065",
+      "project_code_type": "项目编号",
+      "budget_raw": null,
+      "target_summary": "发表国际及国内期刊论文2~5篇，其中SCI检索3篇；申请发明专利2~4项",
+      "report_raw": null,
+      "ppt_raw": null,
+      "supporting_material_raw": "批准通知书.pdf",
+      "metrics": {
+        "zhonghe": {
+          "completed_raw": "1栗世超2孔子涵",
+          "gap_raw": "0",
+          "total_raw": "2",
+          "detail_raw": "1栗世超-变换器-变压器杂志2孔子涵-变压器杂志",
+          "completed": 2,
+          "gap": 0,
+          "total": 2
+        },
+        "invention_patent": {
+          "completed_raw": "3柳轶彬",
+          "gap_raw": "1",
+          "total_raw": "3",
+          "detail_raw": "3柳轶彬+偏磁主动+美国专利+裂铁芯",
+          "completed": 2,
+          "gap": 1,
+          "total": 3
+        },
+        "software_copyright": null,
+        "ei": {
+          "completed_raw": "1柳轶彬",
+          "gap_raw": "0",
+          "total_raw": "1",
+          "detail_raw": "1柳轶彬+功角优化控制",
+          "completed": 1,
+          "gap": 0,
+          "total": 1
+        },
+        "sci": {
+          "completed_raw": "2张立石4柳轶彬1薛彦廷",
+          "gap_raw": "-5",
+          "total_raw": "2",
+          "detail_raw": "2张立石+multi-lay+Collaborative4柳轶彬+mag+uDd+soft_s+Modeling1薛彦廷+PV-SC",
+          "completed": 7,
+          "gap": -5,
+          "total": 2
+        }
+      },
+      "anomaly_flags": [
+        "missing_ppt",
+        "negative_gap_sci"
+      ],
+      "workflow_status": {
+        "data_status": "validated",
+        "evidence_status": "matched",
+        "execution_status": "blocked"
+      }
+    },
+    {
+      "record_id": "T1-R05",
+      "source_table": "table1_recent",
+      "project_name": "2023年自主研究课题(基于柔性设备集群调控的主动配电网多层协同控制与规划方法研究)",
+      "period_raw": "2023.11.10~2025.12.30",
+      "start_date": "2023-11-10",
+      "end_date": "2025-12-30",
+      "date_precision": "day",
+      "project_code": "EIPE23103",
+      "project_code_type": "项目编号",
+      "budget_raw": null,
+      "target_summary": "申请发明专利5项，发表SCI论文4篇（成果第一署名重点实验室并注明资助）",
+      "report_raw": null,
+      "ppt_raw": null,
+      "supporting_material_raw": "自主研究课题立项通知--梁得亮.pdf",
+      "metrics": {
+        "zhonghe": {
+          "completed_raw": "0",
+          "gap_raw": "0",
+          "total_raw": "0",
+          "detail_raw": "0",
+          "completed": 0,
+          "gap": 0,
+          "total": 0
+        },
+        "invention_patent": {
+          "completed_raw": "2薛彦廷1柳轶彬",
+          "gap_raw": "2",
+          "total_raw": "5",
+          "detail_raw": "2薛彦廷1柳轶彬+无旁路",
+          "completed": 3,
+          "gap": 2,
+          "total": 5
+        },
+        "software_copyright": null,
+        "ei": {
+          "completed_raw": "0",
+          "gap_raw": "0",
+          "total_raw": "0",
+          "detail_raw": "0",
+          "completed": 0,
+          "gap": 0,
+          "total": 0
+        },
+        "sci": {
+          "completed_raw": "2启东1张立石2柳轶彬1阳1薛彦廷",
+          "gap_raw": "-3",
+          "total_raw": "4",
+          "detail_raw": "2启东+EnergyM+TIE1张立石+Collaborative2柳轶彬+Soft_s+uDd1阳+无传1薛彦廷+PV+SC",
+          "completed": 7,
+          "gap": -3,
+          "total": 4
+        }
+      },
+      "anomaly_flags": [
+        "missing_ppt",
+        "negative_gap_sci"
+      ],
+      "workflow_status": {
+        "data_status": "validated",
+        "evidence_status": "matched",
+        "execution_status": "blocked"
+      }
+    },
+    {
+      "record_id": "T1-R06",
+      "source_table": "table1_recent",
+      "project_name": "陕西省博士后科研项目“含光储接入的混合式配电变压器协同控制”",
+      "period_raw": "2024.1-2025.12",
+      "start_date": "2024-01",
+      "end_date": "2025-12",
+      "date_precision": "month",
+      "project_code": "【待确认】",
+      "project_code_type": "未设置",
+      "budget_raw": null,
+      "target_summary": "发表国际及国内期刊论文1~3篇，其中SCI检索论文2篇。申请发明专利1~2项。",
+      "report_raw": null,
+      "ppt_raw": null,
+      "supporting_material_raw": "【待确认：项目编号与立项/批文文件待补证】",
+      "metrics": {
+        "zhonghe": {
+          "completed_raw": "0",
+          "gap_raw": "0",
+          "total_raw": "0",
+          "detail_raw": "0",
+          "completed": 0,
+          "gap": 0,
+          "total": 0
+        },
+        "invention_patent": {
+          "completed_raw": "2薛彦廷",
+          "gap_raw": "2",
+          "total_raw": "2",
+          "detail_raw": "2薛彦廷+孤岛-并网5绕组+孤岛-并网3绕组",
+          "completed": 0,
+          "gap": 2,
+          "total": 2
+        },
+        "software_copyright": null,
+        "ei": {
+          "completed_raw": "1薛彦廷",
+          "gap_raw": "1",
+          "total_raw": "1",
+          "detail_raw": "1薛彦廷+切换",
+          "completed": 0,
+          "gap": 1,
+          "total": 1
+        },
+        "sci": {
+          "completed_raw": "1薛彦廷1柳轶彬",
+          "gap_raw": "0",
+          "total_raw": "2",
+          "detail_raw": "1薛彦廷+PV-SC1柳轶彬+Modeling",
+          "completed": 2,
+          "gap": 0,
+          "total": 2
+        }
+      },
+      "anomaly_flags": [
+        "missing_or_pending_project_code",
+        "missing_ppt"
+      ],
+      "workflow_status": {
+        "data_status": "validated",
+        "evidence_status": "partial",
+        "execution_status": "in_progress"
+      }
+    },
+    {
+      "record_id": "T1-R07",
+      "source_table": "table1_recent",
+      "project_name": "2024年度自由探索教师类项目“含偏磁主动抑制的混合式配电变压器多目标协同控制”",
+      "period_raw": "2024.1-2026.12",
+      "start_date": "2024-01",
+      "end_date": "2026-12",
+      "date_precision": "month",
+      "project_code": "【待确认】",
+      "project_code_type": "未设置",
+      "budget_raw": null,
+      "target_summary": "发表国际及国内期刊论文1~2篇，其中SCI检索论文1篇。申请发明专利1~2项。举办学术沙龙一年一次",
+      "report_raw": null,
+      "ppt_raw": null,
+      "supporting_material_raw": "【待确认：项目编号与校内立项文件待补证】",
+      "metrics": {
+        "zhonghe": {
+          "completed_raw": "0",
+          "gap_raw": "0",
+          "total_raw": "0",
+          "detail_raw": "0",
+          "completed": 0,
+          "gap": 0,
+          "total": 0
+        },
+        "invention_patent": {
+          "completed_raw": "1柳轶彬",
+          "gap_raw": "0",
+          "total_raw": "1",
+          "detail_raw": "1柳轶彬+裂铁芯",
+          "completed": 1,
+          "gap": 0,
+          "total": 1
+        },
+        "software_copyright": null,
+        "ei": {
+          "completed_raw": "1薛彦廷",
+          "gap_raw": "0",
+          "total_raw": "1",
+          "detail_raw": "1薛彦廷+PV-SC",
+          "completed": 1,
+          "gap": 0,
+          "total": 1
+        },
+        "sci": {
+          "completed_raw": "1柳轶彬",
+          "gap_raw": "0",
+          "total_raw": "1",
+          "detail_raw": "1柳轶彬+soft_s",
+          "completed": 1,
+          "gap": 0,
+          "total": 1
+        }
+      },
+      "anomaly_flags": [
+        "missing_or_pending_project_code",
+        "missing_ppt"
+      ],
+      "workflow_status": {
+        "data_status": "validated",
+        "evidence_status": "partial",
+        "execution_status": "in_progress"
+      }
+    },
+    {
+      "record_id": "T1-R08",
+      "source_table": "table1_recent",
+      "project_name": "2025年四链融合项目“基于数字驱动的混合式配电变压器状态感知与分层保护关键技术研究”",
+      "period_raw": "2024.10.01~2026.09.30",
+      "start_date": "2024-10-01",
+      "end_date": "2026-09-30",
+      "date_precision": "day",
+      "project_code": "2024PT-ZCK-32",
+      "project_code_type": "项目编号",
+      "budget_raw": null,
+      "target_summary": "学术论文>=3（SCI>=1, EI>=2）；发明专利3；研究报告2；查新报告1与成果鉴定1",
+      "report_raw": null,
+      "ppt_raw": null,
+      "supporting_material_raw": "15_2024PT-ZCK-32合同正式版.pdf",
+      "metrics": {
+        "zhonghe": {
+          "completed_raw": "0",
+          "gap_raw": "0",
+          "total_raw": "0",
+          "detail_raw": "0",
+          "completed": 0,
+          "gap": 0,
+          "total": 0
+        },
+        "invention_patent": {
+          "completed_raw": "0",
+          "gap_raw": "3",
+          "total_raw": "3",
+          "detail_raw": "0",
+          "completed": 0,
+          "gap": 3,
+          "total": 3
+        },
+        "software_copyright": null,
+        "ei": {
+          "completed_raw": "1薛彦廷",
+          "gap_raw": "1",
+          "total_raw": "2",
+          "detail_raw": "1薛彦廷+PV-SC+切换",
+          "completed": 1,
+          "gap": 1,
+          "total": 2
+        },
+        "sci": {
+          "completed_raw": "1柳轶彬",
+          "gap_raw": "1",
+          "total_raw": "1",
+          "detail_raw": "1柳轶彬+Modeling",
+          "completed": 0,
+          "gap": 1,
+          "total": 1
+        }
+      },
+      "anomaly_flags": [
+        "missing_ppt"
+      ],
+      "workflow_status": {
+        "data_status": "validated",
+        "evidence_status": "matched",
+        "execution_status": "in_progress"
+      }
+    },
+    {
+      "record_id": "T2-R01",
+      "source_table": "table2_history",
+      "project_name": "国网_总部(300万)",
+      "period_raw": "2019.01.01~2021.12.31",
+      "start_date": "2019-01-01",
+      "end_date": "2021-12-31",
+      "date_precision": "day",
+      "project_code": null,
+      "project_code_type": "未设置",
+      "budget_raw": "300万",
+      "target_summary": null,
+      "report_raw": "2/柳轶彬、李大伟(2019/12)；2/周堃、柳轶彬(2020/9)",
+      "ppt_raw": "1/柳轶彬、高亚晨(2019/12)；1/蔡生亮、柳轶彬(2020/9)",
+      "supporting_material_raw": "蔡生亮、周堃、柳轶彬(2019/9)；高亚晨、李大伟、柳轶彬(2020/9)",
+      "metrics": {
+        "zhonghe": {
+          "completed_raw": null,
+          "gap_raw": "2",
+          "total_raw": "3",
+          "detail_raw": "周堃1高亚晨1李大伟1",
+          "completed": 1,
+          "gap": 2,
+          "total": 3
+        },
+        "invention_patent": {
+          "completed_raw": "4",
+          "gap_raw": "0",
+          "total_raw": "4",
+          "detail_raw": "李大伟1张立石2柳轶彬1",
+          "completed": 4,
+          "gap": 0,
+          "total": 4
+        },
+        "software_copyright": {
+          "completed_raw": null,
+          "gap_raw": "1",
+          "total_raw": "1",
+          "detail_raw": "张立石1",
+          "completed": 0,
+          "gap": 1,
+          "total": 1
+        },
+        "ei": {
+          "completed_raw": null,
+          "gap_raw": null,
+          "total_raw": "1",
+          "detail_raw": "柳轶彬1",
+          "completed": null,
+          "gap": null,
+          "total": 1
+        },
+        "sci": {
+          "completed_raw": null,
+          "gap_raw": null,
+          "total_raw": "0",
+          "detail_raw": "0",
+          "completed": null,
+          "gap": null,
+          "total": 0
+        }
+      },
+      "anomaly_flags": [],
+      "workflow_status": {
+        "data_status": "validated",
+        "evidence_status": "matched",
+        "execution_status": "done"
+      }
+    },
+    {
+      "record_id": "T2-R02",
+      "source_table": "table2_history",
+      "project_name": "国网_陕西(176万)",
+      "period_raw": "2019.08.01~2020.10.31",
+      "start_date": "2019-08-01",
+      "end_date": "2020-10-31",
+      "date_precision": "day",
+      "project_code": null,
+      "project_code_type": "未设置",
+      "budget_raw": "176万",
+      "target_summary": null,
+      "report_raw": "2/柳轶彬、李大伟、高亚晨(2020/8)",
+      "ppt_raw": "1/柳轶彬(2020/8)",
+      "supporting_material_raw": "王宇珩、刘桦、柳轶彬(2020/8)",
+      "metrics": {
+        "zhonghe": {
+          "completed_raw": null,
+          "gap_raw": null,
+          "total_raw": "1",
+          "detail_raw": "周堃1",
+          "completed": null,
+          "gap": null,
+          "total": 1
+        },
+        "invention_patent": {
+          "completed_raw": null,
+          "gap_raw": null,
+          "total_raw": "2",
+          "detail_raw": "蔡生亮1 张立石1",
+          "completed": null,
+          "gap": null,
+          "total": 2
+        },
+        "software_copyright": {
+          "completed_raw": null,
+          "gap_raw": null,
+          "total_raw": null,
+          "detail_raw": null,
+          "completed": null,
+          "gap": null,
+          "total": null
+        },
+        "ei": {
+          "completed_raw": null,
+          "gap_raw": null,
+          "total_raw": "0",
+          "detail_raw": "0",
+          "completed": null,
+          "gap": null,
+          "total": 0
+        },
+        "sci": {
+          "completed_raw": null,
+          "gap_raw": "0",
+          "total_raw": "1",
+          "detail_raw": "柳轶彬1 power",
+          "completed": 1,
+          "gap": 0,
+          "total": 1
+        }
+      },
+      "anomaly_flags": [],
+      "workflow_status": {
+        "data_status": "validated",
+        "evidence_status": "matched",
+        "execution_status": "done"
+      }
+    },
+    {
+      "record_id": "T2-R03",
+      "source_table": "table2_history",
+      "project_name": "创新链(150万)",
+      "period_raw": "2018.01.01~2020.12.31",
+      "start_date": "2018-01-01",
+      "end_date": "2020-12-31",
+      "date_precision": "day",
+      "project_code": null,
+      "project_code_type": "未设置",
+      "budget_raw": "150万",
+      "target_summary": null,
+      "report_raw": null,
+      "ppt_raw": null,
+      "supporting_material_raw": null,
+      "metrics": {
+        "zhonghe": {
+          "completed_raw": null,
+          "gap_raw": null,
+          "total_raw": "0",
+          "detail_raw": "0",
+          "completed": null,
+          "gap": null,
+          "total": 0
+        },
+        "invention_patent": {
+          "completed_raw": null,
+          "gap_raw": null,
+          "total_raw": "6",
+          "detail_raw": "柳轶彬6",
+          "completed": null,
+          "gap": null,
+          "total": 6
+        },
+        "software_copyright": {
+          "completed_raw": null,
+          "gap_raw": null,
+          "total_raw": null,
+          "detail_raw": null,
+          "completed": null,
+          "gap": null,
+          "total": null
+        },
+        "ei": {
+          "completed_raw": null,
+          "gap_raw": "0",
+          "total_raw": "8",
+          "detail_raw": "柳轶彬3张立石1高亚晨1李大伟1高荣1蔡生亮1",
+          "completed": 8,
+          "gap": 0,
+          "total": 8
+        },
+        "sci": {
+          "completed_raw": null,
+          "gap_raw": null,
+          "total_raw": "6",
+          "detail_raw": "寇老师1柳轶彬3Compound+power+Quasi张立石2Fuzzy+local",
+          "completed": null,
+          "gap": null,
+          "total": 6
+        }
+      },
+      "anomaly_flags": [
+        "missing_ppt",
+        "missing_supporting_material"
+      ],
+      "workflow_status": {
+        "data_status": "validated",
+        "evidence_status": "missing",
+        "execution_status": "in_progress"
+      }
+    },
+    {
+      "record_id": "T2-R04",
+      "source_table": "table2_history",
+      "project_name": "地电_渭南(60万)",
+      "period_raw": "2019.02.01~2019.12.31",
+      "start_date": "2019-02-01",
+      "end_date": "2019-12-31",
+      "date_precision": "day",
+      "project_code": null,
+      "project_code_type": "未设置",
+      "budget_raw": "60万",
+      "target_summary": null,
+      "report_raw": "1/柳轶彬、李大伟(2020/5)；1/周堃、蔡生亮、柳轶彬、张立石(2020/5)",
+      "ppt_raw": null,
+      "supporting_material_raw": "蔡生亮、周堃、柳轶彬(2020/5月)",
+      "metrics": {
+        "zhonghe": {
+          "completed_raw": null,
+          "gap_raw": "2",
+          "total_raw": "2",
+          "detail_raw": "2电行业相关刊物",
+          "completed": 0,
+          "gap": 2,
+          "total": 2
+        },
+        "invention_patent": {
+          "completed_raw": null,
+          "gap_raw": null,
+          "total_raw": "0",
+          "detail_raw": "0",
+          "completed": null,
+          "gap": null,
+          "total": 0
+        },
+        "software_copyright": {
+          "completed_raw": null,
+          "gap_raw": null,
+          "total_raw": null,
+          "detail_raw": null,
+          "completed": null,
+          "gap": null,
+          "total": null
+        },
+        "ei": {
+          "completed_raw": null,
+          "gap_raw": null,
+          "total_raw": null,
+          "detail_raw": null,
+          "completed": null,
+          "gap": null,
+          "total": null
+        },
+        "sci": {
+          "completed_raw": null,
+          "gap_raw": null,
+          "total_raw": "0",
+          "detail_raw": "0",
+          "completed": null,
+          "gap": null,
+          "total": 0
+        }
+      },
+      "anomaly_flags": [
+        "missing_ppt"
+      ],
+      "workflow_status": {
+        "data_status": "validated",
+        "evidence_status": "matched",
+        "execution_status": "in_progress"
+      }
+    },
+    {
+      "record_id": "T2-R05",
+      "source_table": "table2_history",
+      "project_name": "地电_延安(100万)",
+      "period_raw": "2020.01.01~2021.01.01",
+      "start_date": "2020-01-01",
+      "end_date": "2021-01-01",
+      "date_precision": "day",
+      "project_code": null,
+      "project_code_type": "未设置",
+      "budget_raw": "100万",
+      "target_summary": null,
+      "report_raw": "1/周堃、蔡生亮、柳轶彬(2020/9)",
+      "ppt_raw": null,
+      "supporting_material_raw": "李大伟、高亚晨、(2020/9月)",
+      "metrics": {
+        "zhonghe": {
+          "completed_raw": null,
+          "gap_raw": null,
+          "total_raw": "1",
+          "detail_raw": "李大伟1",
+          "completed": null,
+          "gap": null,
+          "total": 1
+        },
+        "invention_patent": {
+          "completed_raw": null,
+          "gap_raw": null,
+          "total_raw": "1",
+          "detail_raw": "高亚晨1",
+          "completed": null,
+          "gap": null,
+          "total": 1
+        },
+        "software_copyright": {
+          "completed_raw": null,
+          "gap_raw": null,
+          "total_raw": null,
+          "detail_raw": null,
+          "completed": null,
+          "gap": null,
+          "total": null
+        },
+        "ei": {
+          "completed_raw": null,
+          "gap_raw": null,
+          "total_raw": null,
+          "detail_raw": null,
+          "completed": null,
+          "gap": null,
+          "total": null
+        },
+        "sci": {
+          "completed_raw": null,
+          "gap_raw": null,
+          "total_raw": "0",
+          "detail_raw": "0",
+          "completed": null,
+          "gap": null,
+          "total": 0
+        }
+      },
+      "anomaly_flags": [
+        "missing_ppt"
+      ],
+      "workflow_status": {
+        "data_status": "validated",
+        "evidence_status": "matched",
+        "execution_status": "in_progress"
+      }
+    },
+    {
+      "record_id": "T2-R06",
+      "source_table": "table2_history",
+      "project_name": "正泰_(300万)",
+      "period_raw": "2019.07.15~2020.12.31",
+      "start_date": "2019-07-15",
+      "end_date": "2020-12-31",
+      "date_precision": "day",
+      "project_code": null,
+      "project_code_type": "未设置",
+      "budget_raw": "300万",
+      "target_summary": null,
+      "report_raw": "1",
+      "ppt_raw": null,
+      "supporting_material_raw": "柳轶彬（设计方案）；李大伟（仿真参数）",
+      "metrics": {
+        "zhonghe": {
+          "completed_raw": null,
+          "gap_raw": null,
+          "total_raw": "0",
+          "detail_raw": "0",
+          "completed": null,
+          "gap": null,
+          "total": 0
+        },
+        "invention_patent": {
+          "completed_raw": null,
+          "gap_raw": null,
+          "total_raw": "0",
+          "detail_raw": "0",
+          "completed": null,
+          "gap": null,
+          "total": 0
+        },
+        "software_copyright": {
+          "completed_raw": "0",
+          "gap_raw": null,
+          "total_raw": null,
+          "detail_raw": "0",
+          "completed": 0,
+          "gap": null,
+          "total": null
+        },
+        "ei": {
+          "completed_raw": null,
+          "gap_raw": null,
+          "total_raw": "0",
+          "detail_raw": "0",
+          "completed": null,
+          "gap": null,
+          "total": 0
+        },
+        "sci": {
+          "completed_raw": null,
+          "gap_raw": null,
+          "total_raw": "0",
+          "detail_raw": "0",
+          "completed": null,
+          "gap": null,
+          "total": 0
+        }
+      },
+      "anomaly_flags": [
+        "missing_ppt"
+      ],
+      "workflow_status": {
+        "data_status": "validated",
+        "evidence_status": "matched",
+        "execution_status": "in_progress"
+      }
+    }
+  ],
+  "supplement_blocks": {
+    "funding_code_notes": [
+      "State Grid Zhejiang Electric Power Company Ltd. (No. 5211HZ230005)",
+      "Key Research and Development Project of Shaanxi Province in 2022 (No. 2022GXLH-01-10)",
+      "State Key Laboratory of Electrical Insulation and Power Equipment under Grant EIPE22107",
+      "State Key Laboratory of Electrical Insulation and Power Equipment under Grant EIPE23103",
+      "Key Research and Development Project of Shaanxi Province in 2024 (No. 2024PT-ZCK-32)",
+      "National Natural Science Foundation of China under Grant 52207065",
+      "the Fundamental Research Funds for the Central Universities",
+      "Postdoctoral Research Project of Shaanxi Province"
+    ],
+    "person_progress_snapshot": [
+      "周堃：1中核、1EI再审",
+      "蔡生亮：1专利、1EI",
+      "李大伟：1专利、1EI、1中核在投",
+      "高亚晨：1专利在投，1中核",
+      "张立石：1EI、2专利、1专利",
+      "柳轶彬：1SCI、3EI、7专利",
+      "寇老师：1SCI",
+      "高荣：1EI"
+    ]
+  },
+  "aggregates": {
+    "total_records": 14,
+    "table1_records": 8,
+    "table2_records": 6,
+    "risk_counts": {
+      "negative_gap_records": 2,
+      "missing_supporting_material_records": 1,
+      "missing_ppt_records": 12,
+      "pending_project_code_records": 2
+    }
+  }
+}
