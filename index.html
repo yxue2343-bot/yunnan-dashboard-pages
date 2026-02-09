@@ -3,50 +3,230 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>云南项目驾驶舱发布包</title>
-    <style>
-      body {
-        margin: 0;
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        background: #eef3fa;
-        font-family: "IBM Plex Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
-        color: #1f2a3a;
-      }
-      .wrap {
-        width: min(640px, 92vw);
-        background: #fff;
-        border: 1px solid #d4deea;
-        border-radius: 14px;
-        padding: 24px;
-      }
-      h1 {
-        margin: 0 0 10px;
-        font-size: 22px;
-      }
-      p {
-        margin: 0 0 12px;
-        color: #5b6d83;
-      }
-      a {
-        display: inline-block;
-        margin-right: 10px;
-        margin-bottom: 8px;
-        padding: 8px 12px;
-        border-radius: 8px;
-        text-decoration: none;
-        background: #e8f0ff;
-        color: #1d57c2;
-      }
-    </style>
+    <title>云南项目执行总览 V4</title>
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="wrap">
-      <h1>云南项目网页发布包</h1>
-      <p>请选择要查看的版本（静态资源已就绪，可直接用于 GitHub Pages）。</p>
-      <a href="./v2/">进入 V2</a>
-      <a href="./v3/">进入 V3</a>
+    <div class="page">
+      <header class="header">
+        <div>
+          <h1>云南项目执行总览 V4</h1>
+          <p>一眼看清每个项目做到哪一步、还差什么、下一步谁来做。</p>
+        </div>
+        <div class="header-meta" id="headerMeta">正在加载数据...</div>
+      </header>
+
+      <section class="cards" id="topCards"></section>
+
+      <section class="home-panels">
+        <article class="panel">
+          <h2>今天该做什么</h2>
+          <ul id="todayList" class="list"></ul>
+        </article>
+        <article class="panel">
+          <h2>高风险项目</h2>
+          <ul id="riskList" class="list"></ul>
+        </article>
+        <article class="panel">
+          <h2>待补材料</h2>
+          <ul id="materialList" class="list"></ul>
+        </article>
+        <article class="panel total-panel">
+          <h2>整体完成率</h2>
+          <p class="big-number" id="overallRate">0%</p>
+          <p class="hint" id="overallHint">-</p>
+        </article>
+      </section>
+
+      <section class="panel filters">
+        <h2>搜索与筛选</h2>
+        <div class="filter-grid">
+          <label>
+            <span>关键词</span>
+            <input id="keywordInput" type="search" placeholder="输入项目名、合同编号、下一步动作" />
+          </label>
+          <label>
+            <span>负责人</span>
+            <select id="ownerFilter"></select>
+          </label>
+          <label>
+            <span>状态</span>
+            <select id="statusFilter"></select>
+          </label>
+          <label>
+            <span>是否逾期</span>
+            <select id="overdueFilter">
+              <option value="all">全部</option>
+              <option value="yes">仅看逾期</option>
+              <option value="no">仅看未逾期</option>
+            </select>
+          </label>
+          <label>
+            <span>是否有缺口</span>
+            <select id="gapFilter">
+              <option value="all">全部</option>
+              <option value="yes">仅看有缺口</option>
+              <option value="no">仅看无缺口</option>
+            </select>
+          </label>
+        </div>
+        <div class="filter-actions">
+          <div class="mode-switch" role="group" aria-label="视图模式">
+            <button id="modeTable" class="btn active">表格模式</button>
+            <button id="modeCard" class="btn">卡片模式</button>
+          </div>
+          <button id="resetFilterBtn" class="btn ghost">重置筛选</button>
+          <p class="hint" id="resultInfo">0 条</p>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="section-head">
+          <h2>项目总览表</h2>
+          <p class="hint">点击“详情”可查看人员、指标、证据、备注；点击“编辑”可直接修改。</p>
+        </div>
+        <div id="projectTableWrap" class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>项目名称</th>
+                <th>合同编号</th>
+                <th>负责人</th>
+                <th>当前阶段</th>
+                <th>完成率</th>
+                <th>缺口</th>
+                <th>下一步动作</th>
+                <th>截止时间</th>
+                <th>状态</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody id="projectTableBody"></tbody>
+          </table>
+        </div>
+        <div id="projectCardList" class="project-cards hidden"></div>
+      </section>
+
+      <section class="panel">
+        <div class="section-head">
+          <h2>待办清单</h2>
+          <p class="hint">按优先级排序，可直接勾选完成。</p>
+        </div>
+        <form id="todoForm" class="inline-form">
+          <input id="todoTitle" type="text" placeholder="新增待办，例如：补齐合同扫描件" required />
+          <input id="todoOwner" type="text" placeholder="负责人" />
+          <select id="todoPriority">
+            <option value="高">高优先</option>
+            <option value="中" selected>中优先</option>
+            <option value="低">低优先</option>
+          </select>
+          <input id="todoDueDate" type="date" />
+          <button class="btn" type="submit">新增待办</button>
+        </form>
+        <ul id="todoList" class="todo-list"></ul>
+      </section>
+
+      <section class="panel tools-panel">
+        <div class="tools-col">
+          <h2>数据导入导出</h2>
+          <p class="hint">导出当前页面数据为 JSON。导入时会覆盖当前数据，系统会二次确认。</p>
+          <div class="tool-actions">
+            <button id="exportBtn" class="btn">导出 JSON</button>
+            <button id="importBtn" class="btn">导入 JSON</button>
+            <button id="restoreBtn" class="btn ghost">恢复初始数据</button>
+            <input id="importInput" type="file" accept="application/json" hidden />
+          </div>
+        </div>
+
+        <div class="tools-col">
+          <h2>数据编辑（项目与指标）</h2>
+          <p class="hint">支持新增项目、编辑项目、编辑指标，保存后自动写入浏览器。</p>
+          <form id="projectForm" class="project-form">
+            <input id="projectId" type="hidden" />
+            <label>
+              <span>项目名称</span>
+              <input id="projectName" type="text" required />
+            </label>
+            <label>
+              <span>合同编号</span>
+              <input id="contractNo" type="text" />
+            </label>
+            <label>
+              <span>负责人</span>
+              <input id="projectOwner" type="text" />
+            </label>
+            <label>
+              <span>当前阶段</span>
+              <input id="currentStage" type="text" placeholder="如：推进中" />
+            </label>
+            <label>
+              <span>状态</span>
+              <select id="projectStatus">
+                <option value="正常">正常</option>
+                <option value="需关注">需关注</option>
+                <option value="高风险">高风险</option>
+                <option value="已完成">已完成</option>
+              </select>
+            </label>
+            <label>
+              <span>截止时间</span>
+              <input id="deadline" type="text" placeholder="YYYY-MM-DD 或 YYYY-MM" />
+            </label>
+            <label class="full">
+              <span>缺口说明</span>
+              <input id="gapSummary" type="text" placeholder="如：EI论文差1、发明专利差2" />
+            </label>
+            <label class="full">
+              <span>下一步动作</span>
+              <input id="nextAction" type="text" placeholder="如：本周先补齐合同映射，再更新台账" />
+            </label>
+            <label class="full">
+              <span>参与人员（用顿号或逗号分隔）</span>
+              <input id="peopleText" type="text" placeholder="如：柳轶彬、张立石、薛彦廷" />
+            </label>
+            <label class="full">
+              <span>目标说明</span>
+              <textarea id="targetSummary" rows="2"></textarea>
+            </label>
+            <label class="full">
+              <span>证据材料</span>
+              <textarea id="supportEvidence" rows="2" placeholder="合同、批文、支撑材料等"></textarea>
+            </label>
+            <label class="full">
+              <span>备注</span>
+              <textarea id="notes" rows="2"></textarea>
+            </label>
+
+            <div class="metrics-editor full">
+              <h3>指标编辑（目标 - 完成 - 缺口）</h3>
+              <div id="metricRows"></div>
+            </div>
+
+            <div class="form-actions full">
+              <button class="btn" type="submit">保存项目</button>
+              <button id="clearProjectBtn" class="btn ghost" type="button">清空表单</button>
+            </div>
+          </form>
+        </div>
+      </section>
     </div>
+
+    <div id="drawerMask" class="drawer-mask" aria-hidden="true">
+      <aside class="drawer">
+        <header>
+          <h3 id="drawerTitle">项目详情</h3>
+          <button id="drawerClose" class="btn ghost">关闭</button>
+        </header>
+        <div class="drawer-tabs" id="drawerTabs">
+          <button data-tab="basic" class="active">基础信息</button>
+          <button data-tab="metrics">指标详情</button>
+          <button data-tab="evidence">证据与备注</button>
+        </div>
+        <div id="drawerContent" class="drawer-content"></div>
+      </aside>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="./app.js"></script>
   </body>
 </html>
